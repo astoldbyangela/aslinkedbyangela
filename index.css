@@ -64,3 +64,27 @@ h2:hover{
   transform: scale(1.05);
   background-color: #1b8a9b;
 }
+
+.twitch{
+  background-color: #A278C0;
+}
+
+.twitch:hover{
+  background-color: #b88cd7;
+}
+
+.discord{
+  background-color: #467CF5
+}
+
+.discord:hover{
+  background-color: #5d8ef9;
+}
+
+.insta{
+  background-color: #F54969;
+}
+
+.insta:hover{
+  background-color: #f5758c;
+}
