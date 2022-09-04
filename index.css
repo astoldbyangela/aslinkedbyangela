@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Rachel Brown';
+  src: url(RachelBrown.otf);
+}
+
+@font-face {
+  font-family: 'Gemini Moon';
+  src: url(GeminiMoon.otf);
+}
+
 body{
   background: #232323;
   display: flex;
@@ -5,7 +15,7 @@ body{
   justify-content: center;
   background-image: url(bg.png);
   color: white;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  font-family:'Rachel Brown'
 }
 
 a {
@@ -16,9 +26,15 @@ p {
   font-size: 20px;
 }
 
-h1 {
-  font-size: 50px;
-  font-weight: bold;
+#letters  {
+  font-size: 60px;
+  font-family: 'Gemini Moon';
+
+}
+
+.letter{
+  position: relative;
+  display: inline-block;
 }
 
 .slanted{
@@ -26,32 +42,81 @@ h1 {
 }
 
 .middle{
-  width: 60%;
-  height: 60%;
-  background-color: #00A0A1;
+  min-width: 60%;
+  min-height: 60%;
+  max-height: 90%;
+  max-width: 90%;
+  width: max-content;
+
   box-shadow: 0px 0px 20px #01363a80 inset;
   border-radius: 1rem;
   display: flex;
+  background-color: #00a1a1;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
+  position: relative;
   /* This hides anything that goes outside the div*/
   overflow: hidden;
+  overflow-y: auto;
+}
+
+.middle *{
+  z-index: 1;
+}
+
+.bg-blur{
+  background-color: #232323;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  background-image: url(bg.png);
+  background-size: 90%;
+  filter: blur(8px);
+  opacity: 0.1;
 }
 
 img {
   width: 50px;
-  margin-bottom: 1rem;
+}
+
+marquee{
+  height: 100px;
+}
+
+img:nth-child(1){
+  animation: bob 4s ease-in-out infinite;
+}
+img:nth-child(2){
+  animation: bob 4s 0.2s ease-in-out infinite;
+  filter: hue-rotate(50deg);
+}
+img:nth-child(3){
+  animation: bob 4s 0.4s ease-in-out infinite;
+  filter: hue-rotate(300deg);
+}
+
+
+@keyframes bob{
+  0% {
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(50px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
 }
 
 h2{
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #0c6674;
   color: white;
   font-size: 30px;
-  font-weight: bold;
-  padding: 0.5 1.5rem;
+  font-weight: normal;
+  padding: 0 1.5rem;
+  padding-top: 0.5rem;
   margin: 0.5rem;
   border-radius: 3rem;
   border-color: white;
@@ -61,7 +126,7 @@ h2{
 }
 
 h2:hover{
-  transform: scale(1.05);
+  transform: scale(1.1);
   background-color: #1b8a9b;
 }
 
