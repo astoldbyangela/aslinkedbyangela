@@ -4,8 +4,8 @@
 }
 
 @font-face {
-  font-family: 'Gemini Moon';
-  src: url(GeminiMoon.otf);
+  font-family: 'Binerka';
+  src: url(Binerka.otf);
 }
 
 body{
@@ -27,8 +27,10 @@ p {
 }
 
 #letters  {
-  font-size: 60px;
-  font-family: 'Gemini Moon';
+  font-size: clamp(10px,10vw,70px);
+  padding: 1rem;
+  font-weight: bold;
+  font-family: 'Binerka';
 
 }
 
